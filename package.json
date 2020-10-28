@@ -1,0 +1,26 @@
+{
+  "name": "node_api_creation",
+  "version": "1.0.0",
+  "description": "Using express to create an api to do Requests",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jesse-Snow/Api-Creation-for-Requests.git"
+  },
+  "author": "Jesse-Snow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jesse-Snow/Api-Creation-for-Requests/issues"
+  },
+  "homepage": "https://github.com/Jesse-Snow/Api-Creation-for-Requests#readme",
+  "dependencies": {
+    "express": "4.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
