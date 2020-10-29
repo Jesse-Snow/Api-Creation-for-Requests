@@ -24,4 +24,10 @@ function getAllProducts(){
     return Object.values(allProducts)
 }
 
-module.exports = { saveProduct,getProduct,getAllProducts }
+function deleteProduct(id){
+    const product = allProducts[id]
+    delete allProducts[id]
+    return product
+}
+
+module.exports = { saveProduct,getProduct,getAllProducts, deleteProduct}
