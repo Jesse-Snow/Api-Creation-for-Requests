@@ -2,17 +2,21 @@ const port = 3003
 
 const express = require("express")
 const dataBase = require("./dataBase.js")
+const bodyParser = require("body-parser")
 const application = express()
+
+
+application.use(bodyParser.urlencoded({ extended:true}))
 
 application.get("/products",(req,res,next) =>{
     res.send(dataBase.getAllProducts())
 })
 
-apllication.get("/products/:id",(req,res,next)=>{
+application.get("/products/:id",(req,res,next)=>{
     res.send(dataBase.getProduct(req.params.id))
 })
 
-apllication.post("/products",(req,res,next)=>{
+application.post("/products",(req,res,next)=>{
     const product = dataBase.saveProduct({
         name:req.body.name,
         price:req.body.price
